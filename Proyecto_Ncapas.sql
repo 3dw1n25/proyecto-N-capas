@@ -38,10 +38,13 @@ nombre varchar(40) primary key,
 contraseña varchar(40),
 );
 
-CREATE TABLE biblioteca(
-idbib integer primary key identity,
-nombreUsr varchar(40),
-idlb integer,
-foreign key (nombreUsr) references usuario (nombre),
-foreign key (idlb) references libros (id)
+
+create table prestamo (
+	idprestamo integer primary key identity,
+	idusuario varchar(40) not null,
+	idarticulo integer not null,
+	fecha datetime not null,
+	estado varchar(20) not null,
+	FOREIGN KEY (idusuario) REFERENCES usuario(nombre),
+	FOREIGN KEY (idarticulo) REFERENCES libros(id)
 );
