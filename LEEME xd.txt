@@ -1,0 +1,1 @@
+a la base ponele de nombre proyecto-Ncapas para que no nos varie al estar pusheando la conexion de visual
