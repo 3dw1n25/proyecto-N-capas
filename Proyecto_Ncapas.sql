@@ -62,3 +62,6 @@ create table prestamo (
 	FOREIGN KEY (idvideo) REFERENCES video(codigo),
 	FOREIGN KEY (idlibro) REFERENCES libros(id)
 );
+
+alter table usuario add apellido varchar(40);
+
